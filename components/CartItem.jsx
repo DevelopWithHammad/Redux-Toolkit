@@ -1,8 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { decreaseCartItemQuantity, increaseCartItemQuantity, removeCartItem } from '../store/slices/cartReducer';
 import { RxCrossCircled } from "react-icons/rx";
-
 
 export default function CartItem({ productId, title, rating, price, imageUrl, quantity }) {
   const dispatch = useDispatch();
