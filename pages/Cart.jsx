@@ -9,7 +9,7 @@ export default function Cart() {
   const isLoading = useSelector(getCartLoading);
   const isError = useSelector(getCartError);
 
-  console.log("cart ===>", cartItems);
+  // console.log("cart ===>", cartItems);
 
   return (
     <div className="cart-container">
