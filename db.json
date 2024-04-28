@@ -1,0 +1,19 @@
+{
+  "tasks": [
+    {
+      "value": "Wakeup",
+      "completed": false,
+      "id": 1
+    },
+    {
+      "value": "Go for a walk",
+      "completed": false,
+      "id": 2
+    },
+    {
+      "value": "Breakfast",
+      "completed": false,
+      "id": 3
+    }
+  ]
+}

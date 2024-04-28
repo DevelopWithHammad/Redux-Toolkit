@@ -27,7 +27,7 @@ const slice = createSlice({
       const existingIndex = findItemIndex(state, action);
       state[existingIndex].quantity -= 1
       if (state[existingIndex].quantity === 0) {
-        state.splice(existingItemIndex, 1);
+        state.splice(existingIndex, 1);
       }
     },
   }

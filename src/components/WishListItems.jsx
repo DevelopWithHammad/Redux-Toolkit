@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { RxCrossCircled } from "react-icons/rx";
-import { removeWishListItem } from '../store/slices/wishListReducer';
+import { removeWishListItem } from '../../store/slices/wishListReducer';
 
 export default function WishListItems({ productId, title, rating, price, imageUrl, quantity }) {
     const dispatch = useDispatch();

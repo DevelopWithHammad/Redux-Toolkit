@@ -1,16 +1,22 @@
 import { createRoot } from 'react-dom/client'
 import App from './App'
 import { Provider } from 'react-redux'
-import { store } from './store'
+import { ToastContainer } from 'react-toastify';
+
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './pages/Home'
-import Cart from './pages/Cart'
-import WishList from './pages/WishList'
+import Home from './src/pages/Home'
+import Cart from './src/pages/Cart'
+import WishList from './src/pages/WishList'
+import { store } from './src/store/store'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <Provider Provider store={store} >
+        <App />,
+      </Provider >
+    ),
     children: [
       {
         path: '/',
@@ -29,7 +35,11 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.querySelector('#root')).render(
-  <Provider store={store}>
+  <>
     <RouterProvider router={router} />
-  </Provider>
+    <ToastContainer
+      position='top-center'
+      autoClose='1000'
+    />
+  </>
 )
